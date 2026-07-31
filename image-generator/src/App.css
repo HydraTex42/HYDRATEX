@@ -1,0 +1,134 @@
+.app-shell {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.app-header h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+}
+
+.app-subtitle {
+  color: var(--text);
+  font-size: 14px;
+}
+
+.image-generator {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 24px;
+  margin-top: 28px;
+}
+
+@media (max-width: 780px) {
+  .image-generator {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ig-controls {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 20px;
+  align-self: start;
+}
+
+.ig-controls label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 16px 0 6px;
+}
+
+.ig-controls label:first-child {
+  margin-top: 0;
+}
+
+.ig-controls input[type='text'],
+.ig-controls select {
+  width: 100%;
+  padding: 9px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--code-bg);
+  color: var(--text-h);
+}
+
+.ig-controls input[type='range'] {
+  width: 100%;
+}
+
+.ig-seed-row {
+  display: flex;
+  gap: 8px;
+}
+
+.ig-seed-row input {
+  flex: 1;
+}
+
+.ig-seed-row button {
+  border: 1px solid var(--border);
+  background: var(--code-bg);
+  border-radius: 8px;
+  padding: 0 12px;
+}
+
+.ig-palette-preview {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.ig-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+}
+
+.ig-download-button {
+  width: 100%;
+  margin-top: 22px;
+  padding: 11px;
+  background: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.ig-download-button:hover {
+  background: var(--accent-hover);
+}
+
+.ig-download-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.ig-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.ig-canvas {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+  background: var(--surface);
+}
+
+.ig-dimensions {
+  font-size: 12px;
+  color: var(--text);
+}

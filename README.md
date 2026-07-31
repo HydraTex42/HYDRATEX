@@ -30,8 +30,9 @@ vault data cannot be decrypted by anyone, including the server operator.
 ## Project structure
 
 ```
-server/   Express + SQLite API (stores encrypted blobs only)
-client/   React + Vite SPA (all crypto happens here, via Web Crypto API)
+server/           Express + SQLite API (stores encrypted blobs only)
+client/           React + Vite SPA (all crypto happens here, via Web Crypto API)
+image-generator/  React + Vite SPA — standalone generative art / image generator
 ```
 
 ## Running locally
@@ -56,6 +57,21 @@ npm run dev              # http://localhost:5173
 
 Open http://localhost:5173, create a vault (email + master password), and
 start adding items.
+
+### 3. Image generator (optional, standalone)
+
+A separate, self-contained app — no relation to the password manager, no
+backend, no API keys. Everything runs client-side in the `<canvas>` element.
+
+```bash
+cd image-generator
+npm install
+npm run dev   # http://localhost:5173 (or next free port)
+```
+
+Pick a seed (or randomize it), a color palette, a shape style, and a
+resolution up to 4K UHD (3840×2160), then export the result as a PNG. The
+same seed + settings always reproduce the same image.
 
 ## Features
 
