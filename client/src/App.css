@@ -1,0 +1,421 @@
+/* ---------- shared form primitives ---------- */
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 14px 0 6px;
+}
+
+input[type='text'],
+input[type='email'],
+input[type='password'],
+input[type='search'],
+textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+  color: var(--text-h);
+}
+
+input:focus,
+textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+button {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text-h);
+  border-radius: 8px;
+  padding: 9px 14px;
+  font-weight: 500;
+}
+
+button:hover {
+  border-color: var(--accent);
+}
+
+button[type='submit'],
+.dashboard-toolbar > button,
+.use-password-button {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+button[type='submit']:hover,
+.dashboard-toolbar > button:hover,
+.use-password-button:hover {
+  background: var(--accent-hover);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+button.secondary {
+  background: transparent;
+}
+
+button.link-button {
+  border: none;
+  background: none;
+  padding: 0;
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.form-error {
+  margin-top: 12px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: rgba(209, 66, 90, 0.1);
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+/* ---------- auth pages ---------- */
+
+.auth-page {
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 32px;
+}
+
+.auth-card h1 {
+  margin: 0 0 8px;
+  font-size: 24px;
+}
+
+.auth-subtitle {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.auth-card button[type='submit'] {
+  width: 100%;
+  margin-top: 20px;
+  padding: 11px;
+}
+
+.auth-footer {
+  margin-top: 18px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.strength-meter {
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.strength-meter .strength-bar {
+  height: 6px;
+  flex: 1;
+  border-radius: 3px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
+.strength-meter .strength-bar::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 3px;
+  transform-origin: left;
+}
+
+.strength-1 .strength-bar::after { background: var(--danger); width: 25%; }
+.strength-2 .strength-bar::after { background: #e0a325; width: 50%; }
+.strength-3 .strength-bar::after { background: #4c9fe0; width: 75%; }
+.strength-4 .strength-bar::after { background: var(--success); width: 100%; }
+
+/* ---------- dashboard ---------- */
+
+.dashboard {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 32px 20px 80px;
+}
+
+.dashboard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.dashboard-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-email {
+  font-size: 13px;
+  color: var(--text);
+}
+
+.dashboard-toolbar {
+  display: flex;
+  gap: 10px;
+  margin: 24px 0;
+}
+
+.dashboard-toolbar input {
+  flex: 1;
+}
+
+.dashboard-empty {
+  text-align: center;
+  color: var(--text);
+  padding: 60px 20px;
+}
+
+/* ---------- vault list ---------- */
+
+.vault-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.vault-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.vault-item-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  background: none;
+  border: none;
+  border-radius: 0;
+  text-align: left;
+}
+
+.vault-item-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.vault-item-title strong {
+  color: var(--text-h);
+}
+
+.vault-item-username {
+  font-size: 12px;
+  color: var(--text);
+}
+
+.chevron {
+  transition: transform 0.15s ease;
+  color: var(--text);
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.vault-item-body {
+  padding: 0 16px 16px;
+  border-top: 1px solid var(--border);
+}
+
+.field-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px dashed var(--border);
+  font-size: 13px;
+}
+
+.field-row:last-of-type {
+  border-bottom: none;
+}
+
+.field-row.notes {
+  align-items: flex-start;
+}
+
+.field-label {
+  width: 80px;
+  flex-shrink: 0;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.field-value {
+  flex: 1;
+  word-break: break-word;
+  color: var(--text-h);
+}
+
+.field-row button {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+.clipboard-status {
+  font-size: 12px;
+  color: var(--success);
+  margin-top: 4px;
+}
+
+/* ---------- item form ---------- */
+
+.password-field {
+  display: flex;
+  gap: 8px;
+}
+
+.password-field input {
+  flex: 1;
+}
+
+.password-field button {
+  white-space: nowrap;
+}
+
+/* ---------- password generator ---------- */
+
+.password-generator {
+  margin-top: 12px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--code-bg);
+}
+
+.generated-value {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.generated-value code {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 8px 10px;
+  word-break: break-all;
+}
+
+.password-generator label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  margin: 12px 0 0;
+}
+
+.password-generator label input[type='range'] {
+  flex: 1;
+}
+
+.generator-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+.generator-options label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  font-weight: 400;
+}
+
+.use-password-button {
+  width: 100%;
+  margin-top: 12px;
+}
+
+/* ---------- modal ---------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 40px 16px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.modal {
+  width: 100%;
+  max-width: 480px;
+  background: var(--surface);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  padding: 24px;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.modal-close {
+  border: none;
+  background: none;
+  font-size: 22px;
+  line-height: 1;
+  padding: 4px;
+  color: var(--text);
+}
