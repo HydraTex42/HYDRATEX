@@ -1,0 +1,121 @@
+// Kartendecks für "Wahrheit oder Pflicht".
+// Drei Stufen, damit ein Paar selbst bestimmt, wie weit der Abend geht.
+
+export const LEVELS = [
+  {
+    id: 'prickelnd',
+    name: 'Prickelnd',
+    hint: 'Flirten, Erinnerungen, erste Funken. Auch auf dem Sofa mit Wein.',
+    accent: '#e9a5c0',
+  },
+  {
+    id: 'heiss',
+    name: 'Heiß',
+    hint: 'Deutlich direkter. Für Abende, an denen ihr ungestört seid.',
+    accent: '#e0708f',
+  },
+  {
+    id: 'intim',
+    name: 'Intim',
+    hint: 'Offene Fragen, viel Nähe. Nur, wenn ihr beide wirklich Lust habt.',
+    accent: '#c94f7c',
+  },
+];
+
+export const CARDS = {
+  prickelnd: {
+    wahrheit: [
+      'Wann hast du dich zuletzt so richtig zu mir hingezogen gefühlt – und warum?',
+      'Was war der Moment, in dem du gemerkt hast: Die/den will ich näher kennenlernen?',
+      'Welches Kleidungsstück an mir magst du am liebsten?',
+      'Was war unser bisher schönster gemeinsamer Kuss?',
+      'Gibt es eine Geste von mir, die dich jedes Mal weich werden lässt?',
+      'Woran denkst du, wenn du tagsüber an mich denkst?',
+      'Was hast du dich schon mal getraut zu wollen, aber nie ausgesprochen?',
+      'Welches Kompliment von mir hast du dir am längsten gemerkt?',
+      'An welchem Ort würdest du mich am liebsten mal überraschen?',
+      'Was findest du an dir selbst attraktiv – ehrlich?',
+      'Welcher Film oder welche Serie hat dich zuletzt richtig romantisch gestimmt?',
+      'Was war dein erster Gedanke, als du mich heute gesehen hast?',
+    ],
+    pflicht: [
+      'Sag mir drei Dinge, die du an meinem Körper magst.',
+      'Schreib mir eine Nachricht, die du mir nie schicken würdest – und lies sie vor.',
+      'Massiere zwei Minuten lang meine Hände. Kein Wort dabei.',
+      'Küss mich irgendwo – ich darf nicht raten, wohin, bis du es tust.',
+      'Beschreibe unser perfektes Wochenende zu zweit in einer Minute.',
+      'Such ein Lied heraus, das dich an uns erinnert, und spiel es ab.',
+      'Sieh mir eine Minute lang in die Augen, ohne zu sprechen.',
+      'Flüster mir etwas ins Ohr, das du sonst nur denkst.',
+      'Zeig mir mit einer Berührung, wie du gerade angefasst werden möchtest.',
+      'Nimm meine Hand und leg sie dorthin, wo du dich am liebsten berühren lässt.',
+      'Erzähl mir eine Erinnerung an uns, die dich immer noch lächeln lässt.',
+      'Zieh ein Kleidungsstück aus – du wählst welches.',
+    ],
+  },
+  heiss: {
+    wahrheit: [
+      'Was hast du dir zuletzt vorgestellt, als du an mich gedacht hast?',
+      'Was war das Aufregendste, das wir bisher zusammen gemacht haben?',
+      'Wo möchtest du unbedingt mal geküsst werden – und wie?',
+      'Gibt es etwas, das du gern öfter hättest, aber selten ansprichst?',
+      'Was macht dich schneller an: sehen, hören oder berührt werden?',
+      'Erinnerst du dich an einen Moment mit mir, an den du oft zurückdenkst?',
+      'Was findest du unwiderstehlich an mir, wenn ich es gar nicht merke?',
+      'Wie sieht für dich der perfekte Abend zu zweit aus – von Anfang bis Ende?',
+      'Was war eine Fantasie, die du hattest, bevor wir uns kannten?',
+      'Gibt es ein Tempo, das dir lieber ist, als du bisher gesagt hast?',
+      'Was sollte ich häufiger tun, ohne dass du darum bitten musst?',
+      'Wobei fühlst du dich mir am nächsten?',
+    ],
+    pflicht: [
+      'Küss mich eine Minute lang – aber nicht auf den Mund.',
+      'Verbinde mir die Augen und lass mich drei Berührungen erraten.',
+      'Massiere meinen Rücken, so langsam du kannst, drei Minuten.',
+      'Erzähl mir eine Fantasie, während du meine Hand hältst.',
+      'Zieh mir ein Kleidungsstück aus – ohne die Hände zu benutzen, wenn du dich traust.',
+      'Zeig mir genau, wie du berührt werden willst. Ich mache es dir nach.',
+      'Flüster mir zehn Sekunden lang ins Ohr, was du gleich vorhast.',
+      'Setz dich auf meinen Schoß und sag mir, was du gerade fühlst.',
+      'Küss mich so, wie du es beim allerersten Mal getan hast.',
+      'Führe meine Hand über deinen Körper – du bestimmst den Weg.',
+      'Wähle einen Ort in der Wohnung, an dem wir noch nie geküsst haben.',
+      'Zähl rückwärts von zwanzig, während ich dich küsse. Verzähl dich nicht.',
+    ],
+  },
+  intim: {
+    wahrheit: [
+      'Was brauchst du von mir, um dich völlig fallen lassen zu können?',
+      'Gibt es etwas, das du dir wünschst, aber bisher zu unsicher warst zu sagen?',
+      'Wann hast du dich mir gegenüber zuletzt richtig verletzlich gefühlt?',
+      'Was macht dir bei uns manchmal Sorgen – auch im Bett?',
+      'Was hat sich für dich verändert, seit wir zusammen sind?',
+      'Wo ist deine Grenze, die ich unbedingt kennen sollte?',
+      'Was hilft dir, wenn du eigentlich Lust hast, aber der Kopf nicht mitspielt?',
+      'Was würdest du gern mal ausprobieren, wenn Peinlichkeit keine Rolle spielte?',
+      'Wie merkst du, dass ich dich begehre?',
+      'Was war der Moment, in dem du dich mir am nächsten gefühlt hast?',
+      'Gibt es etwas, das du bereust – und das wir besser machen könnten?',
+      'Was möchtest du in einem Jahr über uns sagen können?',
+    ],
+    pflicht: [
+      'Sag mir laut, was du dir für heute Nacht wünschst. Ganz konkret.',
+      'Zeig mir ohne Worte, wie du geküsst werden willst.',
+      'Nimm dir fünf Minuten, in denen du nichts tust, außer dich berühren zu lassen.',
+      'Erzähl mir eine Fantasie zu Ende – ich unterbreche dich nicht.',
+      'Leg dich hin und sag mir bei jeder Berührung „mehr“ oder „anders“.',
+      'Halte mich zwei Minuten lang einfach nur fest. Nichts sonst.',
+      'Sag mir drei Dinge, die du an unserer Intimität liebst.',
+      'Bitte mich um etwas, worum du noch nie gebeten hast.',
+      'Schließ die Augen und lass mich entscheiden, was als Nächstes passiert.',
+      'Beschreibe mir, was du gerade spürst, während ich dich berühre.',
+      'Sag mir eine Grenze – und ich sage dir meine.',
+      'Entscheide, wie der Abend weitergeht. Ich sage nur Ja oder Nein.',
+    ],
+  },
+};
+
+export const CARD_TYPES = [
+  { id: 'wahrheit', label: 'Wahrheit' },
+  { id: 'pflicht', label: 'Pflicht' },
+];

@@ -1,10 +1,23 @@
-# HydraTex Password Manager
+# HydraTex
+
+Dieses Repository enthält zwei eigenständige Anwendungen:
+
+| Ordner | Projekt |
+| --- | --- |
+| `server/` + `client/` | **Password Manager** – zero-knowledge Passwortverwaltung (siehe unten) |
+| `erotik-app/` | **Zweisam** – deutschsprachige Paar-App ab 18, rein clientseitig ([README](erotik-app/README.md)) |
+
+Beide Projekte werden getrennt installiert und gestartet.
+
+---
+
+## HydraTex Password Manager
 
 A self-hosted, zero-knowledge password manager. The server only ever stores
 encrypted blobs — your master password and vault encryption key never leave
 your browser.
 
-## How the encryption works
+### How the encryption works
 
 1. You choose an email and a master password. The browser derives a
    **master key** from the master password using PBKDF2 (210,000 iterations,
@@ -27,16 +40,16 @@ your browser.
 **There is no password recovery.** If you forget your master password, your
 vault data cannot be decrypted by anyone, including the server operator.
 
-## Project structure
+### Project structure
 
 ```
 server/   Express + SQLite API (stores encrypted blobs only)
 client/   React + Vite SPA (all crypto happens here, via Web Crypto API)
 ```
 
-## Running locally
+### Running locally
 
-### 1. Server
+#### 1. Server
 
 ```bash
 cd server
@@ -45,7 +58,7 @@ npm install
 npm run dev             # http://localhost:4000
 ```
 
-### 2. Client
+#### 2. Client
 
 ```bash
 cd client
@@ -57,7 +70,7 @@ npm run dev              # http://localhost:5173
 Open http://localhost:5173, create a vault (email + master password), and
 start adding items.
 
-## Features
+### Features
 
 - Zero-knowledge, client-side AES-GCM encryption of all vault data
 - JWT-authenticated REST API backed by SQLite
@@ -67,7 +80,7 @@ start adding items.
 - Copy-to-clipboard with automatic 20-second clipboard clearing
 - Auto-lock on page refresh (vault key never persisted)
 
-## Production hardening notes
+### Production hardening notes
 
 This is a solid MVP, but before running it for real users you should also:
 - Serve over HTTPS only, and move the JWT out of `sessionStorage` into an
